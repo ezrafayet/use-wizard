@@ -1,9 +1,7 @@
 # use-wizard
 
 ![alt react](https://img.shields.io/badge/react-v16.13.x-brightgreen)
-![alt react](https://img.shields.io/badge/stage-testing-orange)
-
-THIS PACKAGE IS NOT AVAILABLE YET
+![alt react](https://img.shields.io/badge/stage-production-brightgreen)
 
 Use wizard is a small hook to manage multi-steps in a wizard. V1 is ultra simple, it is a step-stone for a greater wizard. It does a great job when being used with useForm. Together they let you handle huge multi-steps wizards.
 
@@ -18,16 +16,16 @@ Use wizard is a small hook to manage multi-steps in a wizard. V1 is ultra simple
 
 ## Install it 
 ```
-npm i hook-for-react-use-wizard // NOT AVAILABLE YET
+npm i use-wizard
 ```
 
 ## Call it
 ```
-const useWizard = require('hook-for-react-use-wizard');
+const useWizard = require('use-wizard');
 
 or
 
-import {useWizard} from "hook-for-react-use-wizard";
+import {useWizard} from "use-wizard";
 
 ```
 
@@ -45,7 +43,6 @@ Initial step can be a number or a string.
 * *wizard* comes with a few methods:
     * **nextStep()** increments step by 1
     * **previousStep()** decrements step by 1
-    * **initialStep** sets step to initial value
     * **setStep(n)** sets step to n (can be used with previous step value : setStep(previousStep => previousStep) )
     * **jumpSteps(n)** n must be a positive or negative integer, allowing you to litterally jump n steps
     
