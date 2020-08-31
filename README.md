@@ -8,7 +8,7 @@ THIS PACKAGE IS NOT AVAILABLE YET
 
 Use wizard is a small hook to manage multi-steps in a wizard. V1 is ultra simple, it is a step-stone for a greater wizard. It does a great job when being used with useForm. Together they let you handle huge multi-steps wizards.
 
-![alt exaltation](https://static.adzaria.co/useWizard.png)
+![alt exaltation](https://static.adzaria.co/usewizard.png)
 
 
 # What's great about it ⭐
