@@ -1,6 +1,7 @@
 
 # BUILD DIRECTORY
 lib/
+test
 
 # MODULES
 node_modules

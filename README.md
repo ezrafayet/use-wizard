@@ -32,10 +32,10 @@ import {useWizard} from "use-wizard";
 ## Declare useWizard like you would declare useState or any other hook
 
 ```
-    const [step, wizard] = useWizard(initialStep);
+    const [step, wizard] = useWizard();
 ```
 
-Initial step can be a number or a string.
+And there you go, the first step will be 1. You can pass a number to set a different initial step.
 
 ## And finally just use it 🔖
 
@@ -43,8 +43,9 @@ Initial step can be a number or a string.
 * *wizard* comes with a few methods:
     * **nextStep()** increments step by 1
     * **previousStep()** decrements step by 1
-    * **setStep(n)** sets step to n (can be used with previous step value : setStep(previousStep => previousStep) )
+    * **initialize()** sets step back to initial step
     * **jumpSteps(n)** n must be a positive or negative integer, allowing you to litterally jump n steps
+    * **goToStep(n)** sets step to n (can be used with previous step value : setStep(previousStep => previousStep) )
     
 # useWizard Won't do
 

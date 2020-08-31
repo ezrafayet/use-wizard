@@ -1,24 +1,37 @@
+import {WizardHandler} from "./WizardHandler";
 import {useState} from "react";
+import {getInitialStep} from "./dependencies/getInitialStep";
 
 export {useWizard};
 
-const useWizard = (initialState: any) => {
+interface IWizard {
+  nextStep: () => void,
+  previousStep: () => void,
+  initialize: () => void,
+  jumpSteps: (jumpSize: number) => void,
+  nextNode: () => void,
+  goToStep: Function,
+}
+
+const useWizard = (options?: (string|any)[] | number) => {
   
-  const [step, setStep]: [number, Function] = useState(initialState);
+  const initialStep = getInitialStep(options);
   
-  const nextStep = () => setStep((ps: number) => ps + 1);
-  const previousStep = () => setStep((ps: number) => ps - 1);
-  const initialStep = () => setStep(initialState);
-  const jumpSteps = (jumpSize: number) => setStep((ps: number) => ps + jumpSize);
+  const [step, setStep]: [number|string, Function] = useState(initialStep);
   
-  const wizard = {
-    nextStep: nextStep,
-    previousStep: previousStep,
-    initialStep: initialStep,
-    jumpSteps: jumpSteps,
-    setStep: setStep,
+  const wizardHandler = new WizardHandler(setStep, options);
+  
+  const wizard: IWizard = {
+    nextStep: wizardHandler.nextStep,
+    previousStep: wizardHandler.previousStep,
+    initialize: wizardHandler.initialize,
+    jumpSteps: wizardHandler.jumpSteps,
+    goToStep: wizardHandler.goToStep,
+    nextNode: wizardHandler.nextNode,
   };
+
+  return [step, wizard] as [number, IWizard];
   
-  return [step, wizard];
   
 }
+
