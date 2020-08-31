@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib/cjs",
+    "declaration": true,
+    "target": "es5",
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "sourceMap": true,
+    "removeComments": true,
+    "strict": true,
+    "module": "CommonJS",
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

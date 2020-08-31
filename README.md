@@ -1,8 +1,7 @@
 # use-wizard
 
 ![alt react](https://img.shields.io/badge/react-v16.13.x-brightgreen)
-![alt react](https://img.shields.io/badge/size-x-red)
-![alt react](https://img.shields.io/badge/stage-just.started-red)
+![alt react](https://img.shields.io/badge/stage-testing-orange)
 
 THIS PACKAGE IS NOT AVAILABLE YET
 
