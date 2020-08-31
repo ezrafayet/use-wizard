@@ -1,4 +1,4 @@
-# hook-for-react-use-wizard
+# use-wizard
 
 ![alt react](https://img.shields.io/badge/react-v16.13.x-brightgreen)
 ![alt react](https://img.shields.io/badge/size-x-red)
