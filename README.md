@@ -50,7 +50,7 @@ Initial step can be a number or a string.
     * **setStep(n)** sets step to n (can be used with previous step value : setStep(previousStep => previousStep) )
     * **jumpSteps(n)** n must be a positive or negative integer, allowing you to litterally jump n steps
     
-# useFetch Won't do
+# useWizard Won't do
 
 * Make you latte ☕️
 * Make your grades better (but exalt-grade will so check it)
