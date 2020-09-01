@@ -16,6 +16,7 @@ function getNextStepWhenItsNotLast(options: any, step: string): string {
   
   for(let option of options) {
     if(typeof option !== "string") {
+      
       const nextStepWhenItsNotLast = getNextStepWhenItsNotLast(Object.values(option), step);
       if(!!nextStepWhenItsNotLast) {
         return nextStepWhenItsNotLast;
@@ -23,6 +24,6 @@ function getNextStepWhenItsNotLast(options: any, step: string): string {
     }
   }
   
-  throw new Error("Wizard: next element wasn't found");
+  return "";
   
 }

@@ -26,8 +26,7 @@ function getNextStepWhenItsLast(options: any, step: string): string {
     index ++;
   }
   
-  throw new Error("Wizard: next element wasn't found");
-  
+  return "";
 }
 
 function isElementInObjectShallow(object: any, step: string): boolean {
