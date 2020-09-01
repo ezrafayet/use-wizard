@@ -1,9 +1,11 @@
 # Use a wizard harry
 
 ![alt react](https://img.shields.io/badge/react-v16.13.x-brightgreen)
-![alt react](https://img.shields.io/badge/stage-production-brightgreen)
+![alt react](https://img.shields.io/badge/stage-needs.testing-orange)
 
-A dead-easy-to-use light-weight react hook to handle crazy-multi-paths wizards (and simple wizards too) and navigate into them.
+An easy-to-use light-weight react hook to handle multi-paths wizards (and simple wizards too) and navigate into them.
+
+IMPORTANT: THE SIMPLE SCENARIO (with numbers) IS READY FOR USE. THE COMPLEX SCENARIO NEEDS TESTING, even if it most likely works - don't hesitate to JOIN ON GITHUB if you want to test it / raise flags / add code
 
 ![alt exaltation](https://static.adzaria.co/usewizard.png)
 
@@ -98,10 +100,7 @@ const path = ["A", "B", {
 const [step, wizard] = useWizard(path);
 ```
 
-Again, all the methods described in the first example works out of the box. You really don't need to bother about the complex paths. It is handled for you. 
-
-Another method has been added:
-* **wizard.nextNode()** as the name suggests, it jumps to the next node of the wizard (to the next index in the array)
+Again, all the methods described in the first example works out of the box. You really don't need to bother about the complex paths. Everything is handled for you (the nextStep function and the previousStep function are really a bliss regarding this ...). 
 
 ## Another non-linear wizard (2 sub-paths deep)
 
