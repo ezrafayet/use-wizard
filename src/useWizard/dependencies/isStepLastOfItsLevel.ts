@@ -1,7 +1,7 @@
 export {isStepLastOfItsLevel};
 
 /** Checks if a step is the last of its level */
-function isStepLastOfItsLevel(options: any, step: string) {
+function isStepLastOfItsLevel(options: any, step: string): any {
   
   if(options[options.length - 1] === step) {
     return true;

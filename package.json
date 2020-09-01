@@ -1,6 +1,6 @@
 {
   "name": "use-wizard",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "description": "![alt react](https://img.shields.io/badge/react-v16.13.x-brightgreen) ![alt react](https://img.shields.io/badge/size-x-red) ![alt react](https://img.shields.io/badge/stage-just.started-red)",
   "main": "lib/cjs/index.js",
   "types": "lib/cjs/index.d.ts",

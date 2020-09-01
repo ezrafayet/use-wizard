@@ -1,7 +1,7 @@
 # use-wizard
 
 ![alt react](https://img.shields.io/badge/react-v16.13.x-brightgreen)
-![alt react](https://img.shields.io/badge/stage-production-brightgreen)
+![alt react](https://img.shields.io/badge/stage-testing-orange)
 
 Use wizard is a small hook to manage multi-steps in a wizard. V1 is ultra simple, it is a step-stone for a greater wizard. It does a great job when being used with useForm. Together they let you handle huge multi-steps wizards.
 

@@ -11,51 +11,51 @@ export class WizardHandler {
   private readonly setStep: Function;
   
   /** saved data on history, current step is the last element in it */
-  private history: (string | number)[];
+  private setHistory: Function;
   
-  constructor(setStep: Function, options?: (string | any)[] | number) {
+  constructor(setStep: Function, setHistory: Function, options?: (string | any)[] | number) {
     
     this.setStep = setStep;
+    this.setHistory = setHistory;
     this.options = options || undefined;
     this.initialStep = getInitialStep(options);
     this.wizardStrategy = getWizardStrategy(options);
-    this.history = [this.initialStep];
     
   }
   
-  public nextStep = () => {
+  public nextStep = (history: any) => () => {
     
     if(this.wizardStrategy === "simple") {
-      this.history.push((this.history[this.history.length - 1] as number) + 1);
+      this.setHistory((ps: any) => [...ps, history[history.length - 1] + 1]);
       return this.setStep((previousStep: any) => previousStep + 1);
     }
     
-    if(isStepLastOfLasts(this.options, this.history[this.history.length - 1] as string)) {
+    if(isStepLastOfLasts(this.options, history[history.length - 1] as string)) {
       return console.log("Wizard: step is the last, impossible to process to next step, step is already last");
     }
     
-    const nextStep = getNextStep(this.options, this.history[this.history.length - 1] as string);
+    const nextStep = getNextStep(this.options, history[history.length - 1] as string);
   
-    this.history.push(nextStep);
+    this.setHistory((ps: any) => [...ps, nextStep]);
     return this.setStep(nextStep);
   }
   
-  public previousStep = () => {
-  
-    this.history.pop();
-    return this.setStep(this.history[this.history.length - 1]);
+  public previousStep = (history: any) => async() => {
+
+      this.setHistory((ps: any) => [...ps.slice(0,-1)]);
+      return this.setStep(history[history.length - 2]);
   }
   
   public initialize = () => {
   
-    this.history.push(this.initialStep);
+    this.setHistory((ps: any) => [...ps, this.initialStep]);
     this.setStep(this.initialStep);
   }
   
   public jumpSteps = (jumpSize: number) => {
     
     if(this.wizardStrategy === "simple") {
-      this.history.push((this.history[this.history.length - 1] as number) + jumpSize)
+      this.setHistory((ps: any) => [...ps, ps[ps.length - 1] + jumpSize]);
       return this.setStep((previousStep: any) => previousStep + jumpSize);
     }
     
@@ -66,7 +66,7 @@ export class WizardHandler {
   public goToStep = (step: number | string) => {
     
     this.setStep(step);
-    this.history.push(step);
+    this.setHistory((ps: any) => [...ps, step]);
   }
   
   

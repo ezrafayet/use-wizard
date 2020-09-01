@@ -1,7 +1,7 @@
 export {isStepLastOfLasts};
 
 /** Checks if a step is the last of the wizard */
-function isStepLastOfLasts(options: any, step: string) {
+function isStepLastOfLasts(options: any, step: string): any {
   
   if(typeof options[options.length - 1] === "string") {
     return options[options.length - 1] === step;

@@ -22,4 +22,7 @@ function getNextStepWhenItsNotLast(options: any, step: string): string {
       }
     }
   }
+  
+  throw new Error("Wizard: next element wasn't found");
+  
 }
