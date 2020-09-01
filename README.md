@@ -5,10 +5,10 @@
 
 An easy-to-use light-weight react hook to handle multi-paths wizards (and simple wizards too) and navigate into them.
 
-IMPORTANT: THE SIMPLE SCENARIO (with numbers) IS READY FOR USE. THE COMPLEX SCENARIO NEEDS TESTING, even if it most likely works - don't hesitate to JOIN ON GITHUB if you want to test it / raise flags / add code
+**IMPORTANT**: The simple scenario (with numbers) IS READY FOR USE. The complex scenario needs testing, even if it most likely works - 
 
 ![alt exaltation](https://static.adzaria.co/usewizard.png)
-
+**Don't hesitate to join on github if you want to test it / raise flags / add code ! See you soon !**
 
 # What's great about it ⭐
 
