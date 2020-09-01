@@ -1,5 +1,7 @@
 import {getInitialStep} from "./dependencies/getInitialStep";
 import {getWizardStrategy} from "./dependencies/getWizardStrategy";
+import {isStepLastOfLasts} from "./dependencies/isStepLastOfLasts";
+import {getNextStep} from "./dependencies/getNextStep";
 
 export class WizardHandler {
   
@@ -8,9 +10,8 @@ export class WizardHandler {
   private readonly initialStep: number | string;
   private readonly setStep: Function;
   
-  /** Not used in simple mode */
-  private currentStep: number | string;
-  private path: (string | number)[];
+  /** saved data on history, current step is the last element in it */
+  private history: (string | number)[];
   
   constructor(setStep: Function, options?: (string | any)[] | number) {
     
@@ -18,73 +19,55 @@ export class WizardHandler {
     this.options = options || undefined;
     this.initialStep = getInitialStep(options);
     this.wizardStrategy = getWizardStrategy(options);
-    this.currentStep = this.initialStep;
-    this.path = [this.initialStep];
+    this.history = [this.initialStep];
     
   }
   
   public nextStep = () => {
     
     if(this.wizardStrategy === "simple") {
+      this.history.push((this.history[this.history.length - 1] as number) + 1);
       return this.setStep((previousStep: any) => previousStep + 1);
     }
     
-    if(this.wizardStrategy === "complex") {
-    
+    if(isStepLastOfLasts(this.options, this.history[this.history.length - 1] as string)) {
+      return console.log("Wizard: step is the last, impossible to process to next step, step is already last");
     }
+    
+    const nextStep = getNextStep(this.options, this.history[this.history.length - 1] as string);
+  
+    this.history.push(nextStep);
+    return this.setStep(nextStep);
   }
   
   public previousStep = () => {
   
-    if(this.wizardStrategy === "simple") {
-      return this.setStep((previousStep: any) => previousStep - 1);
-    }
-  
-    if(this.wizardStrategy === "complex") {
-    
-    }
+    this.history.pop();
+    return this.setStep(this.history[this.history.length - 1]);
   }
   
   public initialize = () => {
-    
+  
+    this.history.push(this.initialStep);
     this.setStep(this.initialStep);
-    
-    if(this.wizardStrategy === "complex") {
-      this.currentStep = this.initialStep;
-      this.path = [this.initialStep];
-    }
   }
   
   public jumpSteps = (jumpSize: number) => {
     
     if(this.wizardStrategy === "simple") {
+      this.history.push((this.history[this.history.length - 1] as number) + jumpSize)
       return this.setStep((previousStep: any) => previousStep + jumpSize);
     }
-  
-    if(this.wizardStrategy === "complex") {
     
-    }
+    console.log("Wizard: jump is not handled yet for complex forms");
+    
   }
   
-  public goToStep = (step: number|string) => {
+  public goToStep = (step: number | string) => {
     
     this.setStep(step);
-  
-    if(this.wizardStrategy === "complex") {
-      this.currentStep = step;
-      // Must handle the path, put some undefined to fill if necessary
-    }
+    this.history.push(step);
   }
   
-  public nextNode = () => {
-    
-    if(this.wizardStrategy === "simple") {
-      return this.nextStep();
-    }
-  
-    if(this.wizardStrategy === "complex") {
-    
-    }
-  }
   
 }

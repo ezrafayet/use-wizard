@@ -9,7 +9,6 @@ interface IWizard {
   previousStep: () => void,
   initialize: () => void,
   jumpSteps: (jumpSize: number) => void,
-  nextNode: () => void,
   goToStep: Function,
 }
 
@@ -27,11 +26,9 @@ const useWizard = (options?: (string|any)[] | number) => {
     initialize: wizardHandler.initialize,
     jumpSteps: wizardHandler.jumpSteps,
     goToStep: wizardHandler.goToStep,
-    nextNode: wizardHandler.nextNode,
   };
 
   return [step, wizard] as [number, IWizard];
-  
   
 }
 
