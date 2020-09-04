@@ -1,6 +1,6 @@
 {
   "name": "use-wizard",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "description": "A dead-easy-to-use light-weight react hook to handle multi-paths wizards (and simple wizards too) and navigate into them.\n",
   "main": "lib/cjs/index.js",
   "types": "lib/cjs/index.d.ts",
@@ -31,13 +31,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adzaria/use-wizard.git"
+    "url": "git+https://github.com/use-wizard/use-wizard.git"
   },
   "author": "adzaria",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adzaria/use-wizard/issues"
+    "url": "https://github.com/use-wizard/use-wizard/issues"
   },
-  "homepage": "https://github.com/adzaria/use-wizard#readme",
+  "homepage": "https://github.com/use-wizard/use-wizard#readme",
   "keywords": ["react", "wizard", "form", "step", "multistep", "multipath", "hook"]
 }
