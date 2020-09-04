@@ -7,7 +7,7 @@
     <div><br/></div>
     <div>An easy-to-use react hook to handle multi-paths, multi-steps wizards and navigate through them.</div>
     <div><br/></div>
-        <div>Join on <a href="">GitHub</a> to follow, test, raise issues and join !</div>
+        <div>Join on <a href="https://github.com/use-wizard/use-wizard" alt="GitHub">GitHub</a> to follow, test, raise issues and join !</div>
     <div><br/></div>
     <div>
         <img src="https://img.shields.io/badge/react-v16.13.x-brightgreen" />
