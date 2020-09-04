@@ -5,13 +5,13 @@
 
 An easy-to-use react hook to handle multi-paths, multi-steps wizards and navigate through them.
 
+<div>Join on <a href="">GitHub</a> to follow, test, raise issues and join !</div>
+<div><br/></div>
 <div align="center">
     <img src="https://static.adzaria.co/miniatures/wizard.png" alt="use-wizard" width="200"/>
-    <div style="font-size:1.8rem" align="center">useWizard</div>
+    <div style="font-size:25px" align="center">useWizard</div>
 </div>
     
-    
-**Don't hesitate to join on github if you want to test it / raise issues / add code ! See you soon !**
 
 # What's great about it ⭐
 
