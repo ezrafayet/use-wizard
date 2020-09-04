@@ -1,15 +1,17 @@
 # Use a wizard harry
 
-![alt react](https://img.shields.io/badge/react-v16.13.x-brightgreen)
-![alt react](https://img.shields.io/badge/stage-testing-orange)
 
-An easy-to-use react hook to handle multi-paths, multi-steps wizards and navigate through them.
-
-<div>Join on <a href="">GitHub</a> to follow, test, raise issues and join !</div>
-<div><br/></div>
 <div align="center">
+    An easy-to-use react hook to handle multi-paths, multi-steps wizards and navigate through them.
+    <div><br/></div>
     <img src="https://static.adzaria.co/miniatures/wizard.png" alt="use-wizard" width="200"/>
-    <div style="font-size:25px" align="center">useWizard</div>
+    <div><br/></div>
+        <div>Join on <a href="">GitHub</a> to follow, test, raise issues and join !</div>
+    <div><br/></div>
+    <div>
+        <img src="https://img.shields.io/badge/react-v16.13.x-brightgreen" />
+        <img src="https://img.shields.io/badge/stage-testing-orange" />
+    </div>
 </div>
     
 
