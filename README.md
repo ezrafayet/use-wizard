@@ -3,12 +3,15 @@
 ![alt react](https://img.shields.io/badge/react-v16.13.x-brightgreen)
 ![alt react](https://img.shields.io/badge/stage-testing-orange)
 
-An easy-to-use light-weight react hook to handle multi-paths wizards (and simple wizards too) and navigate into them.
+An easy-to-use react hook to handle multi-paths, multi-steps wizards and navigate through them.
 
-**IMPORTANT**: The simple scenario (with numbers) IS READY FOR USE. The complex scenario needs testing, even if it most likely works - 
-
-![alt exaltation](https://static.adzaria.co/usewizard.png)
-**Don't hesitate to join on github if you want to test it / raise flags / add code ! See you soon !**
+<div align="center">
+    <img src="https://static.adzaria.co/miniatures/wizard.png" alt="use-wizard" width="200"/>
+    <div style="font-size:1.8rem" align="center">useWizard</div>
+</div>
+    
+    
+**Don't hesitate to join on github if you want to test it / raise issues / add code ! See you soon !**
 
 # What's great about it ⭐
 
