@@ -1,7 +1,7 @@
 # Use a wizard harry
 
 ![alt react](https://img.shields.io/badge/react-v16.13.x-brightgreen)
-![alt react](https://img.shields.io/badge/stage-needs.testing-orange)
+![alt react](https://img.shields.io/badge/stage-testing-orange)
 
 An easy-to-use light-weight react hook to handle multi-paths wizards (and simple wizards too) and navigate into them.
 
