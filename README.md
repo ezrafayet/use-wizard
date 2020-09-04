@@ -2,9 +2,10 @@
 
 
 <div align="center">
-    An easy-to-use react hook to handle multi-paths, multi-steps wizards and navigate through them.
     <div><br/></div>
     <img src="https://static.adzaria.co/miniatures/wizard.png" alt="use-wizard" width="200"/>
+    <div><br/></div>
+    <div>An easy-to-use react hook to handle multi-paths, multi-steps wizards and navigate through them.</div>
     <div><br/></div>
         <div>Join on <a href="">GitHub</a> to follow, test, raise issues and join !</div>
     <div><br/></div>
@@ -12,6 +13,7 @@
         <img src="https://img.shields.io/badge/react-v16.13.x-brightgreen" />
         <img src="https://img.shields.io/badge/stage-testing-orange" />
     </div>
+    <div><br/></div>
 </div>
     
 
