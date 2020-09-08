@@ -1,37 +1,41 @@
-import {WizardHandler} from "./WizardHandler";
 import {useState} from "react";
-import {getInitialStep} from "./dependencies/getInitialStep";
+import {getInitialStep} from "./journey/dependencies/getInitialStep";
+import {nextStep} from "./journey/nextStep";
+import {previousStep} from "./journey/previousStep";
+import {goToStep} from "./journey/goToStep";
+import {jumpSteps} from "./journey/jumpSteps";
+import {initialize} from "./journey/initialize";
 
 export {useWizard};
 
 interface IWizard {
-  nextStep: () => void,
-  previousStep: () => void,
-  initialize: () => void,
+  nextStep: Function,
+  previousStep: Function,
+  initialize: Function,
   jumpSteps: (jumpSize: number) => void,
   goToStep: Function,
   history: (string | number)[],
 }
 
+/**
+ * Testing a v2 with no class
+ * @param options
+ */
 const useWizard = (options?: (string | any)[] | number) => {
   
   const initialStep = getInitialStep(options);
   
   const [history, setHistory]: [(number | string)[], Function] = useState([initialStep]);
-  const [step, setStep]: [number | string, Function] = useState(initialStep);
-  
-  const wizardHandler = new WizardHandler(setStep, setHistory, options);
   
   const wizard: IWizard = {
-    nextStep: wizardHandler.nextStep(history),
-    previousStep: wizardHandler.previousStep(history),
-    initialize: wizardHandler.initialize,
-    jumpSteps: wizardHandler.jumpSteps,
-    goToStep: wizardHandler.goToStep,
+    nextStep: nextStep(history, setHistory)(history[history.length - 1], options),
+    previousStep: previousStep(setHistory)(history[history.length - 1], options),
+    initialize: initialize(setHistory, initialStep),
+    jumpSteps: jumpSteps(setHistory, options),
+    goToStep: goToStep(setHistory),
     history: history,
   };
   
-  return [step, wizard] as [number | string, IWizard];
+  return [history[history.length - 1], wizard] as [number | string, IWizard];
   
 }
-

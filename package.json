@@ -1,6 +1,6 @@
 {
   "name": "use-wizard",
-  "version": "2.2.10",
+  "version": "3.1.0",
   "description": "A dead-easy-to-use light-weight react hook to handle multi-paths wizards (and simple wizards too) and navigate into them.\n",
   "main": "lib/cjs/index.js",
   "types": "lib/cjs/index.d.ts",
