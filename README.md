@@ -143,3 +143,12 @@ As deep as you need it to be, you can nest parrallel paths as much as you need t
 
 useWizard "only" helps you to handle multi-paths wizards. If you need to handle data (let's say you are using big nested forms), I invite you to check [use-formidable](https://github.com/use-wizard/use-formidable). 
 
+# What's next ?
+
+Do not hesitate to ask to join or ask for features for your specific needs
+
+* [ ] Add minifier / linter / webpack ... list to be determined, not urgent
+* [x] ~~Unit testing for all functions~~ <--- done
+* [ ] Unit testing using components
+* [ ] See specificities for react-native
+* [ ] Implement caching, maybe with useContext
