@@ -11,5 +11,11 @@ function isStepLastOfLasts(options: any, step: string): any {
     return options[options.length - 1] === step;
   }
   
-  return isStepLastOfLasts(options[options.length - 1], step);
+  for(let obj of Object.values(options[options.length - 1])) {
+    
+    if(isStepLastOfLasts(obj, step)) {
+      return true;
+    }
+  }
+  
 }

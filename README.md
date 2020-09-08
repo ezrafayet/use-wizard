@@ -11,7 +11,7 @@
     <div><br/></div>
     <div>
         <img src="https://img.shields.io/badge/react-v16.13.x-brightgreen" />
-        <img src="https://img.shields.io/badge/stage-testing-orange" />
+        <img src="https://img.shields.io/badge/stage-ready-brightgreen" />
     </div>
     <div><br/></div>
 </div>

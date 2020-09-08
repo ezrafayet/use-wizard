@@ -17,6 +17,6 @@ const nextStep = (history: (number|string)[], setHistory: Function) => (currentS
   }
   // const nextStep = getNextStep(options, history[history.length - 1] as string);
   
-  setHistory((ps: any) => [...ps, getNextStep(options, history[history.length - 1] as string)]);
+  setHistory((ps: any) => [...ps, getNextStep(history[history.length - 1] as string, options)]);
   
 }
