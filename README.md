@@ -16,11 +16,12 @@
     <div><br/></div>
 </div>
     
+![alt use-wizard-sample](https://static.adzaria.co/npm/use-wizard-sample.jpg)
 
 # What does it do
 
-* It handles multi-steps and multi-paths complex wizards in a dead-easy declarative way
-* It gives you many options to navigate through them
+* It handles creation of multi-steps and multi-paths complex wizards in a simple declarative way
+* It gives you many ways to navigate through them
 * Types are included for typescript, it is lightweight and has no dependencies,
 * Use it with [use-formidable](https://github.com/use-wizard/use-formidable) to handle complex multi-path, multi-steps nested forms.
 
