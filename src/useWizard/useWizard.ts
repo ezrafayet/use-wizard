@@ -1,44 +1,33 @@
 import {useState} from "react";
-import {getInitialStep} from "./journey/dependencies/getInitialStep";
-import {nextStep} from "./journey/nextStep";
-import {previousStep} from "./journey/previousStep";
-import {goToStep} from "./journey/goToStep";
-import {jumpSteps} from "./journey/jumpSteps";
-import {initialize} from "./journey/initialize";
+import {getInitialStep} from "./dependencies/getInitialStep";
+import {getWizardType} from "./dependencies/nextStep/getWizardType";
+import {IWizard} from "./types/IWizard";
+import {TStep} from "./types/TStep";
+import {isTypeWizard} from "./types/typeGuards/isTypeWizard";
+import {getWizardMethods} from "./dependencies/getWizardMethods";
 
 export {useWizard};
 
-interface IWizard {
-  nextStep: Function;
-  previousStep: Function;
-  forwardStep: Function;
-  initialize: Function;
-  jumpSteps: (jumpSize: number) => void;
-  goToStep: Function;
-  history: (string | number)[];
-}
-
-/**
- * Testing a v2 with no class
- * @param options
- */
-const useWizard = (options?: (string | any)[] | number) => {
+const useWizard = (options?: unknown): [TStep, IWizard] => {
   
-  const initialStep = getInitialStep(options);
+  if(!isTypeWizard(options)) throw new Error("Wizard error: wrong wizard options, check the doc");
   
-  const [history, setHistory]: [(number | string)[], Function] = useState([initialStep]);
-  const [poppedHistory, setPoppedHistory]: [(number | string)[], Function] = useState([]);
+  const wizardType = getWizardType({options});
   
-  const wizard: IWizard = {
-    nextStep: nextStep(history, setHistory)(history[history.length - 1], options),
-    previousStep: previousStep(setHistory, setPoppedHistory),
-    forwardStep: () => setPoppedHistory((ps: string[]) => ([...ps])),
-    initialize: initialize(setHistory, initialStep),
-    jumpSteps: jumpSteps(setHistory, options),
-    goToStep: goToStep(setHistory),
-    history: history,
-  };
+  const [history, setHistory] = useState<TStep[]>([getInitialStep({options, wizardType})]);
+  const [poppedHistory, setPoppedHistory] = useState<TStep[]>([]);
   
-  return [history[history.length - 1], wizard] as [number | string, IWizard];
+  const step = history[history.length - 1];
+  
+  const wizard = getWizardMethods({
+    history,
+    poppedHistory,
+    setHistory,
+    setPoppedHistory,
+    wizardType,
+    options
+  });
+  
+  return [step, wizard];
   
 }

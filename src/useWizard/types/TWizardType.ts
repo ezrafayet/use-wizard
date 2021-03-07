@@ -1,0 +1,1 @@
+export type TWizardType = "linearN" | "linearS" | "nested";
