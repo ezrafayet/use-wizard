@@ -60,15 +60,21 @@ import {useWizard} from "use-wizard";
 ## Declare useWizard like any other hook
 
 ```
-const [step, wizard] = useWizard(); // For a linear wizard with numbers
+// For a linear wizard with numbers
+const [step, wizard] = useWizard(); 
 
 or
 
-const [step, wizard] = useWizard(['splash', 'name', 'email', 'terms', 'validation']); // For a linear wizard with strings
+// For a linear wizard with strings
+const [step, wizard] = useWizard(['splash', 'name', 'email', 'terms', 'validation']); 
 
 or
 
-const [step, wizard] = useWizard(['splash', {}] // For a nested wizard 
+// For a nested wizard 
+const [step, wizard] = useWizard(["A", "B", {
+        "1": ["C", "D", "E"],
+        "2": ["F", "G"]
+    }, "H"]);
 
 ```
 There you go, that's all. 
