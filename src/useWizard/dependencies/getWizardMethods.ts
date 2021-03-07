@@ -29,7 +29,10 @@ const getWizardMethods = (args: {
       setHistory: args.setHistory,
       setPoppedHistory: args.setPoppedHistory
     }),
-    goToStep: goToStep({setHistory: args.setHistory}),
+    goToStep: goToStep({
+      setHistory: args.setHistory,
+      setPoppedHistory: args.setPoppedHistory
+    }),
     history: args.history,
     initialize: initialize({
       setHistory: args.setHistory,

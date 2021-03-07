@@ -183,8 +183,8 @@ This hook heavily relies on recursion to identify steps in a nested pattern.
 
 <tr>
 <td></td>
-<td>linearN</td>
-<td>linearS</td>
+<td>linear (numbers)</td>
+<td>linear (strings)</td>
 <td>nested</td>
 </tr>
 
