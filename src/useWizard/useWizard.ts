@@ -9,12 +9,13 @@ import {initialize} from "./journey/initialize";
 export {useWizard};
 
 interface IWizard {
-  nextStep: Function,
-  previousStep: Function,
-  initialize: Function,
-  jumpSteps: (jumpSize: number) => void,
-  goToStep: Function,
-  history: (string | number)[],
+  nextStep: Function;
+  previousStep: Function;
+  forwardStep: Function;
+  initialize: Function;
+  jumpSteps: (jumpSize: number) => void;
+  goToStep: Function;
+  history: (string | number)[];
 }
 
 /**
@@ -26,10 +27,12 @@ const useWizard = (options?: (string | any)[] | number) => {
   const initialStep = getInitialStep(options);
   
   const [history, setHistory]: [(number | string)[], Function] = useState([initialStep]);
+  const [poppedHistory, setPoppedHistory]: [(number | string)[], Function] = useState([]);
   
   const wizard: IWizard = {
     nextStep: nextStep(history, setHistory)(history[history.length - 1], options),
-    previousStep: previousStep(setHistory)(history[history.length - 1], options),
+    previousStep: previousStep(setHistory, setPoppedHistory),
+    forwardStep: () => setPoppedHistory((ps: string[]) => ([...ps])),
     initialize: initialize(setHistory, initialStep),
     jumpSteps: jumpSteps(setHistory, options),
     goToStep: goToStep(setHistory),
