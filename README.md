@@ -18,7 +18,7 @@
     
 ![alt use-wizard-sample](https://static.adzaria.co/npm/use-wizard-sample.jpg)
 
-Real-life examples (check /examples) :
+Real-life examples :
 * A basic example for a linear wizard with numbers: <a href="https://codesandbox.io/s/use-wizard-1-bkj5d">
   use-wizard-1
   </a>
@@ -81,6 +81,95 @@ There you go, that's all.
 
 Now you can just use a switch to display content according to steps and use methods stored in wizard to navigate.
 
+## Methods compatibility
+
+<table>
+
+<tr>
+<td></td>
+<td>linear wizard (numbers)</td>
+<td>linear wizard (strings)</td>
+<td>nested wizard</td>
+</tr>
+
+<tr>
+<td>history</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+
+<tr>
+<td>nextStep</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+
+<tr>
+<td>previousStep</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+
+<tr>
+<td>nPreviousSteps</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+
+<tr>
+<td>nForwardSteps</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+
+<tr>
+<td>forwardStep</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+
+<tr>
+<td>initialize</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+
+<tr>
+<td>goToStep</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+
+<tr>
+<td>jumpSteps</td>
+<td>✔</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+
+<tr>
+<td>stepIndex</td>
+<td>❌</td>
+<td>✔</td>
+<td>❌</td>
+</tr>
+
+<tr>
+<td>wizardLength</td>
+<td>❌</td>
+<td>✔</td>
+<td>❌</td>
+</tr>
+
+</table>
 
 # Get started the simple way
 
@@ -178,100 +267,9 @@ As deep as you need it to be, you can nest parallel paths as much as you need to
 
 ## Under the hood
 
-This hook relies on two stack stored as states. One is the history-stack, to store the actual path the user took, and the other one is the popped-history-stack, so the user can go forward when he went backward (see examples).
+This hook relies on two stacks stored as states. One is the history-stack, used to store the actual path the user took. The other one is the popped-history-stack, so the user can go forward when he went backward (see examples).
 
 This hook heavily relies on recursion to identify steps in a nested pattern.
-
-## Methods compatibility
-
-
-<table>
-
-<tr>
-<td></td>
-<td>linear (numbers)</td>
-<td>linear (strings)</td>
-<td>nested</td>
-</tr>
-
-<tr>
-<td>history</td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-
-<tr>
-<td>nextStep</td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-
-<tr>
-<td>previousStep</td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-
-<tr>
-<td>nPreviousSteps</td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-
-<tr>
-<td>nForwardSteps</td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-
-<tr>
-<td>forwardStep</td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-
-<tr>
-<td>initialize</td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-
-<tr>
-<td>goToStep</td>
-<td>✔</td>
-<td>✔</td>
-<td>✔</td>
-</tr>
-
-<tr>
-<td>jumpSteps</td>
-<td>✔</td>
-<td>❌</td>
-<td>❌</td>
-</tr>
-
-<tr>
-<td>stepIndex</td>
-<td>❌</td>
-<td>✔</td>
-<td>❌</td>
-</tr>
-
-<tr>
-<td>wizardLength</td>
-<td>❌</td>
-<td>✔</td>
-<td>❌</td>
-</tr>
-
-</table>
 
 # Go further
 
