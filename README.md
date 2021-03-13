@@ -19,12 +19,12 @@
 ![alt use-wizard-sample](https://static.adzaria.co/npm/use-wizard-sample.jpg)
 
 Real-life examples (check /examples) :
-```
-* A linear wizard with numbers: link to come
+* A basic example for a linear wizard with numbers: <a href="https://codesandbox.io/s/use-wizard-1-bkj5d">
+  use-wizard-1
+  </a>
 * A linear wizard with strings: link to come
 * A non-linear wizard: link to come
-* An example with a class-component: link to come
-```
+* An example with conditional steps: link to come
 
 # What does it do ?
 
@@ -279,9 +279,10 @@ useWizard "only" helps you to handle multi-paths wizards. If you need to handle 
 
 # What's next ?
 
-Do not hesitate to ask for features / to join
+Do not hesitate to ask for features / PR / or join
 
 * [x] ~~Unit testing for all functions~~
-* [ ] Move the master branch to main
+* [x] ~~Move the master branch to main~~
+* [x] ~~Write examples~~
 * [ ] Add a minifier / linter / webpack ... list to be determined, not urgent
 * [ ] Test it with react-native
