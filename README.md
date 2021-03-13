@@ -18,7 +18,7 @@
     
 ![alt use-wizard-sample](https://static.adzaria.co/npm/use-wizard-sample.jpg)
 
-Real-life examples :
+# Real-life examples :
 * A basic example for a linear wizard with numbers: <a href="https://codesandbox.io/s/use-wizard-1-bkj5d">
   use-wizard-1
   </a>
@@ -265,7 +265,7 @@ The first step would be again the step "A", and you can use all methods from the
 
 As deep as you need it to be, you can nest parallel paths as much as you need to
 
-## Under the hood
+# Under the hood
 
 This hook relies on two stacks stored as states. One is the history-stack, used to store the actual path the user took. The other one is the popped-history-stack, so the user can go forward when he went backward (see examples).
 
