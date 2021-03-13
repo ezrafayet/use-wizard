@@ -1,13 +1,15 @@
+import {TStep} from "./TStep";
+
 export interface IWizard {
-  nextStep: Function;
-  previousStep: any;
+  nextStep: () => void;
+  previousStep: () => void;
   nPreviousSteps: number;
   nForwardSteps: number;
-  forwardStep: Function;
-  initialize: Function;
-  jumpSteps: (jumpSize: number) => void;
-  goToStep: Function;
-  history: (string | number)[];
-  stepIndex: Function;
-  wizardLength: Function;
+  forwardStep: () => void;
+  initialize: () => void;
+  jumpSteps: (jump: number) => void;
+  goToStep: (step: TStep) => void;
+  history: TStep[];
+  stepIndex: () => number;
+  wizardLength: () => number;
 }

@@ -8,5 +8,7 @@ const goToStep = (args: {setHistory: Function, setPoppedHistory: Function}) => (
   
   args.setPoppedHistory([]);
   
-  return args.setHistory((ps: TStep[]) => [...ps, step]);
+  args.setHistory((ps: TStep[]) => [...ps, step]);
+  
+  return;
 }

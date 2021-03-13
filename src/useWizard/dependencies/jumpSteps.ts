@@ -7,5 +7,6 @@ const jumpSteps = (args: { wizardType: TWizardType, options: TWizardOptions, set
   
   if(args.wizardType !== "linearN") return console.log("Wizard warning: steps-jumping does not work with this kind of wizard");
   
-  return args.setHistory((ps: number[]) => [...ps, ps[ps.length - 1] + jump]);
+  args.setHistory((ps: number[]) => [...ps, ps[ps.length - 1] + jump]);
+  return;
 }

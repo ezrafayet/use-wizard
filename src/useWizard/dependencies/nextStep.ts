@@ -21,4 +21,5 @@ const nextStep = (args: { wizardType: TWizardType, history: TStep[], setHistory:
   
   args.setHistory((ps: any) => [...ps, getNextStep(args.history[args.history.length - 1] as string, args.options)]);
   
+  return;
 }
