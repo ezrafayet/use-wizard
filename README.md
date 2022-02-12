@@ -6,8 +6,6 @@
     <div><br/></div>
     <div>The React.JS hook useWizard is an easy-to-use state manager that handles multi-paths, multi-steps wizards and navigate through them.</div>
     <div><br/></div>
-        <div>Join on <a href="https://github.com/use-wizard/use-wizard" alt="GitHub">GitHub</a> to follow, test, raise issues and join !</div>
-    <div><br/></div>
     <div>
         <img src="https://img.shields.io/badge/react-v17.0.x-brightgreen" />
         <img src="https://img.shields.io/badge/min--react-v16.13.x-brightgreen" />
@@ -22,7 +20,7 @@
 * A basic example for a linear wizard with numbers: <a href="https://codesandbox.io/s/use-wizard-1-bkj5d">
   use-wizard-1
   </a>
-* A linear wizard with strings: <a href="https://codesandbox.io/s/use-wizard-2-q243g">
+* A linear wizard with strings: <a href="https://codesandbox.io/s/use-wizard-2-q243g">use-wizard-1</a>
 * A non-linear wizard: link to come
 * An example with conditional steps: link to come
 
