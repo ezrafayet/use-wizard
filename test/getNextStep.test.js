@@ -1,4 +1,4 @@
-const {getNextStep} = require("../lib/cjs/useWizard/journey/dependencies/getNextStep");
+const {getNextStep} = require("../lib/cjs/useWizard/dependencies/nextStep/getNextStep");
 
 test("Linear path from first step", () => {
 

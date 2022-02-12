@@ -1,4 +1,4 @@
-const {isStepLastOfItsLevel} = require("../lib/cjs/useWizard/journey/dependencies/isStepLastOfItsLevel");
+const {isStepLastOfItsLevel} = require("../lib/cjs/useWizard/dependencies/nextStep/isStepLastOfItsLevel");
 
 test("Last of it's level #1", () => {
 

@@ -1,4 +1,4 @@
-const {getInitialStep} = require("../lib/cjs/useWizard/journey/dependencies/getInitialStep");
+const {getInitialStep} = require("../lib/cjs/useWizard/dependencies/getInitialStep");
 
 test("Test with numbers, no initialStep set", ()=>{
   const a = getInitialStep();

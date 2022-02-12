@@ -1,4 +1,4 @@
-const {getWizardStrategy} = require("../lib/cjs/useWizard/journey/dependencies/getWizardStrategy");
+const {getWizardStrategy} = require("../lib/cjs/useWizard/dependencies/getWizardStrategy");
 
 
 test("Simple strategy with no option", () => {

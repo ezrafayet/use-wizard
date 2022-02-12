@@ -22,7 +22,7 @@
 * A basic example for a linear wizard with numbers: <a href="https://codesandbox.io/s/use-wizard-1-bkj5d">
   use-wizard-1
   </a>
-* A linear wizard with strings: link to come
+* A linear wizard with strings: <a href="https://codesandbox.io/s/use-wizard-2-q243g">
 * A non-linear wizard: link to come
 * An example with conditional steps: link to come
 
