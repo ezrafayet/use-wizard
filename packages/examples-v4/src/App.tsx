@@ -21,7 +21,7 @@ const App = () => {
                 <div className={"text-xl"}>Example of wizards built with use-wizard</div>
             </div>
             <Space />
-            <div>
+            <div className={"px-2"}>
                 {page === 'home' && <Home setPage={setPage} />}
                 {page === 'linearNumbered' && <LinearNumberedWizard/>}
                 {page === 'linearNamed' && <LinearNamedWizard/>}

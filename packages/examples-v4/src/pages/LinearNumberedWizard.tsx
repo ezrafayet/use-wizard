@@ -73,7 +73,6 @@ const WizardStep1 = ({data, setData, wizard}: any) => {
         footer={
             <Fragment>
                 <Button
-                    key={1}
                     text={"Continue"}
                     disabled={!data.userDares}
                     onClick={() => wizard.nextStep()}
@@ -102,7 +101,6 @@ const WizardStep2 = ({data, setData, wizard}: any) => {
         footer={
             <Fragment>
                 <Button
-                    key={2}
                     text={"Continue"}
                     disabled={!data.nickname}
                     onClick={() => wizard.nextStep()}
@@ -117,7 +115,6 @@ const WizardStep3 = ({data, setData, wizard}: any) => {
         title={"What is your favourite animal?"}
         children={<div>
             <Button
-                key={1}
                 onClick={() => {
                     setData((ps: any) => ({...ps, preferredAnimals: "dogs"}));
                     wizard.nextStep();
@@ -125,7 +122,6 @@ const WizardStep3 = ({data, setData, wizard}: any) => {
                 text={"Dogs"}
             />
             <Button
-                key={2}
                 onClick={() => {
                     setData((ps: any) => ({...ps, preferredAnimals: "cats"}));
                     wizard.nextStep();
@@ -133,7 +129,6 @@ const WizardStep3 = ({data, setData, wizard}: any) => {
                 text={"Cats"}
             />
             <Button
-                key={3}
                 onClick={() => {
                     setData((ps: any) => ({...ps, preferredAnimals: "frogs"}));
                     wizard.nextStep();
@@ -155,7 +150,6 @@ const WizardStep4 = ({data, setData, wizard}: any) => {
         footer={
             <Fragment>
                 <Button
-                    key={2}
                     text={"Validate"}
                     onClick={() => wizard.nextStep()}
                 />
