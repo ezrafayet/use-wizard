@@ -1,48 +1,25 @@
 {
   "name": "use-wizard",
-  "version": "4.0.6",
-  "description": "A dead-easy-to-use light-weight react hook to handle multi-paths wizards (and simple wizards too) and navigate into them.\n",
-  "main": "lib/cjs/index.js",
-  "types": "lib/cjs/index.d.ts",
-  "directories": {
-    "lib": "lib"
-  },
-  "devDependencies": {
-    "@types/node": "^14.6.0",
-    "@types/react": "^16.9.46",
-    "jest": "^26.4.2",
-    "react": "^16.13.1",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.2"
-  },
-  "scripts": {
-    "build": "npm run build:cjs",
-    "build:esm": "tsc --build tsconfig-esm.json",
-    "build:cjs": "tsc --build tsconfig-cjs.json",
-    "test": "npm run build:cjs && jest",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run test",
-    "preversion": "",
-    "version": "npm run format && git add -A lib",
-    "postversion": "git push && git push --tags"
-  },
+  "version": "5.0.0",
+  "description": "A react hook to build multi-path, multi-steps complex wizards",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/use-wizard/use-wizard.git"
   },
-  "author": "adzaria",
-  "license": "ISC",
+  "author": "Ezra Fayet",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/use-wizard/use-wizard/issues"
   },
-  "homepage": "https://github.com/use-wizard/use-wizard#readme",
+  "homepage": "https://github.com/ezrafayet/use-wizard#readme",
   "keywords": [
     "react",
+    "hook",
     "wizard",
-    "form",
-    "step",
-    "multistep",
-    "multipath",
-    "hook"
+    "form"
+  ],
+  "workspaces": [
+    "packages/use-wizard",
+    "packages/examples"
   ]
 }

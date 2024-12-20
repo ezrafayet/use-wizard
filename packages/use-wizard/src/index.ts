@@ -6,8 +6,6 @@ import {TStep} from "./types/TStep";
 import {isTypeWizard} from "./types/typeGuards/isTypeWizard";
 import {getWizardMethods} from "./dependencies/getWizardMethods";
 
-export {useWizard};
-
 const useWizard = (options?: unknown): [TStep, IWizard] => {
   
   if(!isTypeWizard(options)) throw new Error("Wizard error: wrong wizard options, check the doc");
@@ -31,3 +29,5 @@ const useWizard = (options?: unknown): [TStep, IWizard] => {
   return [step, wizard];
   
 }
+
+export {useWizard};

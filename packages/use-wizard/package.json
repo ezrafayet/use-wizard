@@ -1,0 +1,43 @@
+{
+  "name": "use-wizard",
+  "version": "5.0.0",
+  "description": "A react hook to build multi-path, multi-steps complex wizards",
+  "main": "lib/cjs/index.js",
+  "types": "lib/cjs/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm run build:cjs",
+    "build:esm": "tsc --build tsconfig-esm.json",
+    "build:cjs": "tsc --build tsconfig-cjs.json",
+    "test": "npm run build:cjs && jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test",
+    "preversion": "",
+    "version": "npm run format && git add -A lib",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezrafayet/use-wizard.git"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "wizard",
+    "form"
+  ],
+  "author": "Ezra Fayet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezrafayet/use-wizard/issues"
+  },
+  "homepage": "https://github.com/ezrafayet/use-wizard#readme",
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "jest": "^29.7.0",
+    "react": "^19.0.0",
+    "typescript": "^5.7.2"
+  }
+}

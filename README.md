@@ -7,7 +7,7 @@
     <div>Use-wizard is a React hook that allows you to create multi-paths, multi-steps wizards, and it exposes methods to navigate through them.</div>
     <div><br/></div>
     <div>
-        <img src="https://img.shields.io/badge/react-v17.0.x-brightgreen" />
+        <img src="https://img.shields.io/badge/react-v19.0.x-brightgreen" />
         <img src="https://img.shields.io/badge/min--react-v16.13.x-brightgreen" />
         <img src="https://img.shields.io/badge/stage-ready-brightgreen" />
     </div>
