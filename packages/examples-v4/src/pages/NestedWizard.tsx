@@ -18,7 +18,7 @@ const NestedWizard = () => {
         {step === "foundGold" && <FoundGold wizard={wizard}/>}
         {step === "monster" && <Monster wizard={wizard}/>}
         {step === "chooseWeapon" && <ChooseWeapon wizard={wizard}/>}
-        {step === "finish" && <Finish wizard={wizard}/>}
+        {step === "finish" && <Finish/>}
     </div>
 };
 
