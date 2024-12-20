@@ -18,7 +18,7 @@ const Home = ({
                 <ButtonLink onClick={() => setPage("conditional")} text={"A wizard with conditional steps "}/>
             </li>
             <li className={"text-gray-600"}>
-                A wizard using a react forms library (example coming later)
+                A wizard using a react forms library (example may come later)
             </li>
         </ul>
     </div>
