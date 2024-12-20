@@ -1,10 +1,16 @@
 # Use a wizard Harry
 
+<div style="background-color:rgba(199,147,16,0.37);padding:10px 20px;">
+I am currently writing the version 5. If you are using it and I did not contact you, let me know your use cases, your struggles and your needs! (open an issue). It should be out during Q1 of 2025.
+</div>
+
+<br/>
+
 <div align="center">
     <div><br/></div>
     <img src="./assets/logo.jpg" alt="use-wizard" width="350"/>
     <div><br/></div>
-    <div>Use-wizard is a React hook that allows you to create multi-paths, multi-steps wizards, and it exposes methods to navigate through them.</div>
+    <div>Use-wizard is a React hook that allows you to create multi-paths, multi-steps wizards. It exposes methods to navigate through them.</div>
     <div><br/></div>
     <div>
         <img src="https://img.shields.io/badge/react-v19.0.x-brightgreen" />
@@ -14,29 +20,28 @@
     <div><br/></div>
 </div>
     
-![alt use-wizard-sample](https://static.adzaria.co/npm/use-wizard-sample.jpg)
+[//]: # (![alt use-wizard-sample]&#40;https://static.adzaria.co/npm/use-wizard-sample.jpg&#41;)
 
 # Real-life examples :
-* A basic example for a linear wizard with numbers: <a href="https://codesandbox.io/s/use-wizard-1-bkj5d">
-  use-wizard-1
-  </a>
-* A linear wizard with strings: <a href="https://codesandbox.io/s/use-wizard-2-q243g">use-wizard-2</a>
-* A non-linear wizard: link to come
-* An example with conditional steps: link to come
+
+- You can view a live demo here: [click here](https://ezrafayet.com/use-wizard/live-demo-v4/)
+- The code for each wizard of the live demo is here: [click here](https://github.com/ezrafayet/use-wizard/tree/v5/packages/examples-v4/src/pages)
 
 # What does it do ?
 
-* It handles the creation of multi-steps and multi-paths complex wizards in a simple declarative way,
-* It allows your user to navigate through them through useful method,
-* It gives you the ability to generate custom wizards for your users,
-* It makes refactoring / maintaining your wizard extremely easy.
+* It lets you create complex multi-steps and multi-paths wizards in a simple declarative way
+* It allows your users to navigate through them with useful method
+* It gives you the ability to generate wizards programmatically (where your users can generate wizards on demand for example, which was my main use case)
+* It makes maintaining your wizard a lot easier
+
+It is NOT:
+- A library for forms (though you can use a form library with it if you want)
 
 # The 3 kind of wizards
 
-Below you will find 3 examples. Each of them describe a different way of declaring your wizard.
-* The linear wizard with numbers: each step is a number, it starts with step 1.
-* The linear wizard with strings: you have to initialize your wizard with an array of strings, each of them being a different step. The first one is the first step.
-* The nested wizard: this one allows you to define wizards with nested routes.
+* The linear wizard with numbered steps: each step is a number, it starts with step 1.
+* The linear wizard with named steps: you have to initialize your wizard with an array of strings, each of them being a different step. The first one is the first step.
+* The nested wizard: this one allows you to define wizards with nested routes (as deep as needed).
 
 # Installing and initializing it
 
@@ -172,8 +177,9 @@ Now you can just use a switch to display content according to steps and use meth
 # Get started the simple way
 
 In this ultra-basic lizard (linear-wizard) scenario, each step is a number. Look at figure 1.1 bellow to see what we will achieve.
-![alt exaltation](https://static.adzaria.co/npm/usewizard1.jpg)
-*figure 1.1*
+
+[//]: # (![alt exaltation]&#40;https://static.adzaria.co/npm/usewizard1.jpg&#41;)
+[//]: # (*figure 1.1*)
 
 ## declare it
 ```
@@ -202,8 +208,9 @@ We will first study a lizard scenario. We will then study two non-linear wizards
 ## The linear wizard with strings
 
 This scenario is very close to the one above, but each step of the wizard is now a string. Look at figure 2.1 bellow to see what we will achieve.
-![alt exaltation](https://static.adzaria.co/npm/usewizard2.jpg)
-*figure 2.1*
+
+[//]: # (![alt exaltation]&#40;https://static.adzaria.co/npm/usewizard2.jpg&#41;)
+[//]: # (*figure 2.1*)
 
 Declare your wizard with an array of strings like so:
 
@@ -219,8 +226,9 @@ const [step, wizard] = useWizard(["A", "B", "C"]);
 ## The non-linear wizard (1 sub-path deep)
     
 useWizard allows you to create non-linear paths in a simple declarative way. Look at figure 2.2 bellow to see what we will achieve.
-![alt exaltation](https://static.adzaria.co/npm/usewizard3.jpg)
-*figure 3.1*
+
+[//]: # (![alt exaltation]&#40;https://static.adzaria.co/npm/usewizard3.jpg&#41;)
+[//]: # (*figure 3.1*)
 
 All we have to do is to declare the wizard like above, but we will use an object instead of a string when we have different possible paths. 
 * Declare parallel paths in an object, where paths' keys are "1", "2", "3" ...
@@ -242,8 +250,9 @@ Again, most methods described in the first example works out of the box (see tab
 ## Another non-linear wizard (2 sub-paths deep)
 
 This example only takes complexity a step ahead to show you what you can achieve. I will just give you the figure 2.3 and the declarative wizard that goes with it.
-![alt exaltation](https://static.adzaria.co/npm/usewizard4.jpg)
-*figure 4.1*
+
+[//]: # (![alt exaltation]&#40;https://static.adzaria.co/npm/usewizard4.jpg&#41;)
+[//]: # (*figure 4.1*)
 
 The example of the figure 4.1 would be written like this:
 ```
@@ -268,17 +277,3 @@ As deep as you need it to be, you can nest parallel paths as much as you need to
 This hook relies on two stacks stored as states. One is the history-stack, used to store the actual path the user took. The other one is the popped-history-stack, so the user can go forward when he went backward (see examples).
 
 This hook heavily relies on recursion to identify steps in a nested pattern.
-
-# Go further
-
-useWizard "only" helps you to handle multi-paths wizards. If you need to handle data (let's say you are using big nested forms), I invite you to check [use-formidable](https://github.com/use-wizard/use-formidable). 
-
-# What's next ?
-
-Do not hesitate to ask for features / PR / or join
-
-* [x] ~~Unit testing for all functions~~
-* [x] ~~Move the master branch to main~~
-* [x] ~~Write examples~~
-* [ ] Add a minifier / linter / webpack ... list to be determined, not urgent
-* [ ] Test it with react-native
