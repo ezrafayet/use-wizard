@@ -1,0 +1,34 @@
+{
+  "name": "use-wizard-examples",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Examples for use-wizard",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/use-wizard/use-wizard.git\".git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/use-wizard/use-wizard.git\"/issues"
+  },
+  "homepage": "https://github.com/use-wizard/use-wizard.git\"#readme",
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "use-wizard": "^4.0.6"
+  }
+}
