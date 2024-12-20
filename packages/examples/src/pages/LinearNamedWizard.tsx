@@ -1,7 +1,7 @@
 
 const LinearNamedWizard = () => {
     return <div>
-        Todo
+        Todo named
     </div>
 };
 

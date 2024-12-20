@@ -1,22 +1,26 @@
+import Link from "../ui/Link";
+
 const Home = ({
     setPage,
               }: any) => {
     return <div>
         <ul>
             <li>
-                A linear wizard with numbered-steps (todo)<button onClick={() => setPage('linearNumbered')}>link</button>
+                <Link onClick={() => setPage("linearNumbered")} text={"A linear wizard with numbered-steps"}/>
             </li>
             <li>
-                A linear wizard with named-steps (todo)
+                <Link onClick={() => setPage("linearNamed")} text={"A linear wizard with named-steps"}/>
             </li>
             <li>
-                A nested wizard (todo)
+                <Link onClick={() => setPage("nested")} text={"A nested wizard"}/>
             </li>
             <li>
-                A wizard with conditional steps (todo)
+                <Link onClick={() => setPage("conditional")} text={"A wizard with conditional steps "}/>
             </li>
-            <li>
-                A wizard using a react forms library (todo)
+            <li style={{
+                color: 'gray'
+            }}>
+                A wizard using a react forms library (example coming later)
             </li>
         </ul>
     </div>

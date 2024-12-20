@@ -1,7 +1,7 @@
 
 const LibraryWizard = () => {
     return <div>
-        Todo
+        Todo library
     </div>
 };
 

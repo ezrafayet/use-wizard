@@ -1,4 +1,51 @@
 body {
     font-family: sans-serif;
     line-height: 1.6;
+    margin: 0;
+    font-size: 18px;
+}
+
+.header {
+    background-color: #222;
+    padding: 20px 40px;
+}
+
+.content {
+    width: 95%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 16px;
+    color: white;
+}
+
+.breadcrumbs__element {
+    padding: 0;
+    background-color: #0000;
+    border: none;
+    font-size: 16px;
+    color: white;
+}
+
+.breadcrumbs__separator {
+    margin: 0 0.4rem;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+h1 {
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.link, link:visited, link:active, link:hover {
+    color: #0084fc;
 }

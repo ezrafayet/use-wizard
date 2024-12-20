@@ -2,7 +2,7 @@ import { useWizard } from 'use-wizard';
 
 const LinearNumberedWizard = () => {
     return <div>
-        Todo
+        Todo numbered
     </div>
 };
 

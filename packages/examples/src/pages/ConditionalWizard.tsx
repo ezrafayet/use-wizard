@@ -1,7 +1,7 @@
 
 const ConditionalWizard = () => {
     return <div>
-        Todo
+        Todo conditional
     </div>
 };
 
