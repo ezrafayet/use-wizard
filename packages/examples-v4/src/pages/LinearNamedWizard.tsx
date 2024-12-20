@@ -1,5 +1,5 @@
 import {useWizard} from 'use-wizard';
-import {Fragment, useEffect, useState} from "react";
+import {Fragment, useState} from "react";
 import WizardCard from "../ui/WizardCard";
 import Space from "../ui/Space";
 import Button from "../ui/Button";
@@ -26,7 +26,7 @@ const LinearNamedWizard = () => {
 };
 
 const WizardNavigation = ({wizard, step}: any) => {
-    const showPreviousStep = wizard.nPreviousSteps !== 0 && step !== 5;
+    const showPreviousStep = wizard.nPreviousSteps !== 0 && step !== "finish";
     const showForwardStep = wizard.nForwardSteps !== 0;
     return <div className={"flex flex-row justify-between text-gray-600"}>
         <div className={"w-28 "}>
@@ -102,7 +102,7 @@ const WizardStep2 = ({data, setData, wizard}: any) => {
     />
 }
 
-const WizardStep3 = ({data, setData, wizard}: any) => {
+const WizardStep3 = ({setData, wizard}: any) => {
     return <WizardCard
         title={"What is your favourite animal?"}
         children={<div>
@@ -131,7 +131,7 @@ const WizardStep3 = ({data, setData, wizard}: any) => {
         footer={<Fragment></Fragment>}/>
 }
 
-const WizardStep4 = ({data, setData, wizard}: any) => {
+const WizardStep4 = ({data, wizard}: any) => {
     return <WizardCard
         title={"Validate your choices"}
         children={<div>

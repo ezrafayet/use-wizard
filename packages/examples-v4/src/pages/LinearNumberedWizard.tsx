@@ -1,5 +1,5 @@
 import {useWizard} from 'use-wizard';
-import {Fragment, useEffect, useState} from "react";
+import {Fragment, useState} from "react";
 import WizardCard from "../ui/WizardCard";
 import Space from "../ui/Space";
 import Button from "../ui/Button";
@@ -103,7 +103,7 @@ const WizardStep2 = ({data, setData, wizard}: any) => {
     />
 }
 
-const WizardStep3 = ({data, setData, wizard}: any) => {
+const WizardStep3 = ({setData, wizard}: any) => {
     return <WizardCard
         title={"What is your favourite animal?"}
         children={<div>
@@ -132,7 +132,7 @@ const WizardStep3 = ({data, setData, wizard}: any) => {
         footer={<Fragment></Fragment>}/>
 }
 
-const WizardStep4 = ({data, setData, wizard}: any) => {
+const WizardStep4 = ({data, wizard}: any) => {
     return <WizardCard
         title={"Validate your choices"}
         children={<div>
@@ -151,7 +151,7 @@ const WizardStep4 = ({data, setData, wizard}: any) => {
     />
 }
 
-const WizardStep5 = ({data, setData, wizard}: any) => {
+const WizardStep5 = ({}: any) => {
     return <WizardCard
         title={"Thank you!"}
         children={<div>
