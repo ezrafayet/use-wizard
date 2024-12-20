@@ -1,38 +1,36 @@
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import Home from "./pages/Home";
 import LinearNumberedWizard from "./pages/LinearNumberedWizard";
 import Breadcrumbs from "./ui/Breadcrumbs";
 import LinearNamedWizard from "./pages/LinearNamedWizard";
 import NestedWizard from "./pages/NestedWizard";
 import ConditionalWizard from "./pages/ConditionalWizard";
+import Link from "./ui/Link";
+import Space from "./ui/Space";
 
 type Page = 'home' | 'linearNumbered' | 'linearNamed' | 'nested' | 'conditional';
 
 const App = () => {
     const [page, setPage] = useState<Page>('home');
-    const [breadCrumbElements, setBreadCrumbElements] = useState<{name: string, onClick?: () => void}[]>([]);
-
-    useEffect(() => {
-        if (page === 'home') {
-            setBreadCrumbElements([{name: "Home"}]);
-        } else {
-            setBreadCrumbElements([{name: "Home", onClick: () => setPage('home')}, {name: page}]);
-        }
-    }, [page])
 
     return (
-        <main className={"main"}>
-            <div className={"header"}>
-                <Breadcrumbs elements={breadCrumbElements} />
-                <h1 className={"header__title"}>Examples of usage for use-wizard</h1>
-                <div className={"header__link"}>Check the code at: <a className={"link"} href={"https://github.com/ezrafayet/use-wizard"}>https://github.com/ezrafayet/use-wizard</a></div>
+        <main className={"flex flex-col w-full max-w-screen-md m-auto"}>
+            <div className={"bg-gray-950 text-white px-2 py-2"}>
+                <Breadcrumbs page={page} setPage={setPage} />
+                <div className={"mt-0.1"}></div>
+                <div className={"text-xl"}>Example of wizards built with use-wizard</div>
             </div>
-            <div className={"content"}>
+            <Space />
+            <div>
                 {page === 'home' && <Home setPage={setPage} />}
                 {page === 'linearNumbered' && <LinearNumberedWizard/>}
                 {page === 'linearNamed' && <LinearNamedWizard/>}
                 {page === 'nested' && <NestedWizard />}
                 {page === 'conditional' && <ConditionalWizard/>}
+            </div>
+            <Space />
+            <div className={"border-t-2 text-center py-5"}>
+                Check the code at: <Link url={"https://github.com/ezrafayet/use-wizard"}/>
             </div>
         </main>
     );
