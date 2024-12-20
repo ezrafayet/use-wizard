@@ -2,7 +2,7 @@
 
 <div align="center">
     <div><br/></div>
-    <img src="./assets/logo.jpg" alt="use-wizard" width="200"/>
+    <img src="./assets/logo.jpg" alt="use-wizard" width="350"/>
     <div><br/></div>
     <div>Use-wizard is a React hook that allows you to create multi-paths, multi-steps wizards, and it exposes methods to navigate through them.</div>
     <div><br/></div>
