@@ -12,7 +12,7 @@ body {
 
 .header__link {
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .header__title {
@@ -24,7 +24,7 @@ body {
 
 .content {
     width: 95%;
-    max-width: 900px;
+    max-width: 600px;
     margin: 40px auto;
 }
 
@@ -54,4 +54,33 @@ body {
 
 .link, link:visited, link:active, link:hover {
     color: #0084fc;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.wizard {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.wizard__header {
+    background-color: #ddd;
+    width: 100%;
+    padding: 20px 30px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.wizard__navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 16px;
+    color: gray;
 }
