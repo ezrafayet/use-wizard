@@ -24,7 +24,8 @@ const App = () => {
         <main className={"main"}>
             <div className={"header"}>
                 <Breadcrumbs elements={breadCrumbElements} />
-                <h1>Examples of usage for use-wizard</h1>
+                <h1 className={"header__title"}>Examples of usage for use-wizard</h1>
+                <div className={"header__link"}>Check the code at: <a className={"link"} href={"https://github.com/ezrafayet/use-wizard"}>https://github.com/ezrafayet/use-wizard</a></div>
             </div>
             <div className={"content"}>
                 {page === 'home' && <Home setPage={setPage} />}
