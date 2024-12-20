@@ -13,11 +13,14 @@ I am currently writing the version 5. If you are using it and I did not contact 
     <div>Use-wizard is a React hook that allows you to create multi-paths, multi-steps wizards. It exposes methods to navigate through them.</div>
     <div><br/></div>
     <div>
-        <img src="https://img.shields.io/badge/react-v19.0.x-brightgreen" />
-        <img src="https://img.shields.io/badge/min--react-v16.13.x-brightgreen" />
-        <img src="https://img.shields.io/badge/stage-ready-brightgreen" />
+        <img src="https://img.shields.io/npm/dm/use-wizard" />
+        <img src="https://img.shields.io/badge/stage-production--ready-brightgreen" />
+        <img src="https://img.shields.io/github/stars/ezrafayet/use-wizard"/>
     </div>
-    <div><br/></div>
+</div>
+
+<div>
+![npm downloads]()
 </div>
 
 [//]: # (![alt use-wizard-sample]&#40;https://static.adzaria.co/npm/use-wizard-sample.jpg&#41;)
