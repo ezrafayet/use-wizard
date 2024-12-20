@@ -10,17 +10,10 @@ const LinearNumberedWizard = () => {
     const [data, setData] = useState({
         userDares: false,
         nickname: "",
+        preferredAnimal: "",
     });
 
-    useEffect(() => {
-        console.log(data)
-    }, [data])
-
     return <div className={"wizard"}>
-        {/*<Code title={"A linear wizard with numbered steps"}>*/}
-        {/*    const [step, wizard] = useWizard();*/}
-        {/*</Code>*/}
-        <Space/>
         <WizardNavigation step={step} wizard={wizard}/>
         <Space/>
         {step === 1 && <WizardStep1 data={data} setData={setData} wizard={wizard}/>}
@@ -116,21 +109,21 @@ const WizardStep3 = ({data, setData, wizard}: any) => {
         children={<div>
             <Button
                 onClick={() => {
-                    setData((ps: any) => ({...ps, preferredAnimals: "dogs"}));
+                    setData((ps: any) => ({...ps, preferredAnimal: "dogs"}));
                     wizard.nextStep();
                 }}
                 text={"Dogs"}
             />
             <Button
                 onClick={() => {
-                    setData((ps: any) => ({...ps, preferredAnimals: "cats"}));
+                    setData((ps: any) => ({...ps, preferredAnimal: "cats"}));
                     wizard.nextStep();
                 }}
                 text={"Cats"}
             />
             <Button
                 onClick={() => {
-                    setData((ps: any) => ({...ps, preferredAnimals: "frogs"}));
+                    setData((ps: any) => ({...ps, preferredAnimal: "frogs"}));
                     wizard.nextStep();
                 }}
                 text={"Frogs"}
@@ -145,7 +138,7 @@ const WizardStep4 = ({data, setData, wizard}: any) => {
         children={<div>
             Nickname: {data.nickname}
             <br/>
-            Preferred animals: {data.preferredAnimals}
+            Preferred animals: {data.preferredAnimal}
         </div>}
         footer={
             <Fragment>
