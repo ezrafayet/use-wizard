@@ -1,7 +1,7 @@
 # Use a wizard Harry
 
 <div style="background-color:rgba(199,147,16,0.37);padding:10px 20px;">
-I am currently writing the version 5. If you are using it and I did not contact you, let me know your use cases, your struggles and your needs! (open an issue). It should be out during Q1 of 2025.
+I am currently writing the version 5. If you are using it and I did not contact you, let me know your use cases, your struggles and your needs! (open an issue).
 </div>
 
 <br/>
